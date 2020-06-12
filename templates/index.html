@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for('static', filename='bitbug_favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <script src="{{ url_for('static', filename='jquery-3.5.1.js') }}"></script>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <p class="status">当前节点共有：<span id="counter"></span>个项目</p>
+    <ul id="list"></ul>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <hr>
+    <p style="font-style: italic">Python@{{ info }}</p>
+</body>
+</html>
