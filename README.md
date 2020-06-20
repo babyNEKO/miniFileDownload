@@ -8,3 +8,4 @@
 + 还不能打开文件夹目录
 
 <br />需要部署的小伙伴们自行配置wsgi我就不写了
+<br />miniFileDownload/static/index.js 把里面127.0.0.1改成你服务器的地址。
