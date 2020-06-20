@@ -50,12 +50,12 @@ def redirect_get_list():
 
 @app.errorhandler(405)
 def not_allowed(error):
-    return jsonify({"ERROR": "405", "MESSAGE": "NOT ALLOWED."}), 405
+    return jsonify({"ERROR": "405"}), 405
 
 
 @app.errorhandler(404)
 def not_found(error):
-    return jsonify({"ERROR": "404", "MESSAGE": "NOT FOUND."}), 404
+    return jsonify({"ERROR": "404"}), 404
 
 
 if __name__ == '__main__':
