@@ -11,7 +11,7 @@ app.config['JSON_AS_ASCII'] = False
 
 @app.route('/', methods=['GET'])
 def index():
-    info = platform.python_version() + " Flask@" + __version__ + " Werkzeug@1.0.0"
+    info = platform.python_version() + " Flask@" + __version__
     return render_template('index.html', title=conf.SITE_NAME, lang=conf.LANGUAGE, info=info)
 
 
