@@ -35,12 +35,16 @@ def redirect_get_file():
 
 @app.route('/get_list', methods=['GET'])
 def get_list():
-    files = listdir(conf.MAIN_DIR)
-    for x in conf.FORBIDDEN_FILES:
-        if x in files:
-            files.remove(x)
-    counter = len(files)
-    return jsonify({"counter": counter, "file_list": files})
+    try:
+        files = listdir(conf.MAIN_DIR)
+        for x in conf.FORBIDDEN_FILES:
+            if x in files:
+                files.remove(x)
+        counter = len(files)
+        return jsonify({"counter": counter, "file_list": files})
+    except FileNotFoundError:
+        msg = "根目录读取失败"
+        return jsonify({"message:": msg})
 
 
 @app.route('/get_list/', methods=['GET'])
